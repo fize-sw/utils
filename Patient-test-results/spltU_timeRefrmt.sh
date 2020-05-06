@@ -96,7 +96,7 @@ for s in $rec_i_files; do
 	src_file=$RECORD_SHEET_I_DIR/$s
         pre_file=$RECORD_SHEET_I_RES_DIR/pre-$s
 
-	cat $src_file |  awk -F"," 'NR==1{} NR>1{a=gensub(/[/:]/," ","g",$2) ; split(a, b, " "); split($4,c,":"); d=b[3]" "b[2]" "b[1]" "c[1]" "c[2]" 0"; print mktime(d)","$NF}' > $pre_file
+	cat $src_file |  awk -F"," 'NR==1{} NR>1{a=gensub(/[/:]/," ","g",$2) ; split(a, b, " "); split($4,c,":"); d=b[3]" "b[2]" "b[1]" "c[1]" "c[2]" 0"; print mktime(d)","$(NF-1)}' > $pre_file
 #        cat $src_file |  awk -F"," 'NR==1{print $0} NR>1{a=gensub(/[/:]/," ","g",$2) ; split(a, b, " "); c=b[3]" "b[2]" "b[1]" "b[4]" "b[5]" 0"; printf "%s,%s", $1,mktime(c) ;for(i=3;i<=NF;i++){printf ",%s", $i} printf "\n"}' > $pre_file
 
 	src_file=$pre_file
