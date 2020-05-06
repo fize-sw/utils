@@ -1,0 +1,41 @@
+
+
+1. every directory has files. 
+   file-name = patient number
+2. Log directory 
+   files include patient info :  including start-time
+3. Filered-Urine  directory   includes Urine files
+   extract to a different file the following lines : 
+      from : "Polynomial" (not included)
+      until : "-999" (not included)
+   and to a second file : 
+      from : "12: Polinomia (not included)
+      until : "-999" (not included)
+
+first coloum is  : time in seconds from the start time.
+Second coloum is : urime volume
+
+4. Monitor directory includes :
+      - directory per patient 
+      - use the file ARTmmHg-MEAN - AVG
+        - first coloum is date and time in a format ???
+        - second coloum is Artery blood pressure 
+
+5. Monitor NBP includes blood :
+      - pressure  from the ARM
+        - first coloum is date and time in a format ???
+        - second coloum is ARM blood pressure
+
+6. Record sheet I includes
+      - Nurse Urine sample 
+        - The second colum includes date & time
+        - The AL coloum includes Urine Sample
+
+7. The format in the files are in Numbers, text, eime in seconds from start time
+   It is recommanded that the format will be the same for all of them
+
+
+        
+       
+
+
